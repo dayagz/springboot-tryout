@@ -1,0 +1,10 @@
+{"namespace": "com.github.dayagz.springboot.events",
+  "type": "record",
+  "name": "GenericEvent",
+  "fields": [
+    {"name": "correlation_id", "type": "string"},
+    {"name": "event_type", "type": "string"},
+    {"name": "event_version", "type": "string", "default": "V2.0"},
+    {"name": "application_id", "type": "string"},
+    {"name": "application_module", "type": "string"},
+    {"name": "spec_version", "type": "string", "default": "V1.0"}
