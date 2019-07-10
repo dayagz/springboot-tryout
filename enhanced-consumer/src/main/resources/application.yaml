@@ -1,0 +1,25 @@
+spring:
+  kafka:
+    bootstrap-servers: cipher:9092
+    consumer:
+      group-id: events_persister
+      enable-auto-commit: false
+      auto-offset-reset: earliest
+    listener:
+      ack-mode: manual
+      type: batch
+
+  data:
+    cassandra:
+      keyspace-name: events
+      contact-points: 192.168.1.100
+      port: 9042
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+event:
+  topics: test\
+          test_events\
+          test_events_1
