@@ -12,7 +12,7 @@ import org.springframework.data.cassandra.core.mapping.Table;
 import java.time.LocalDateTime;
 
 @Data
-@Accessors(fluent = true)
+@Accessors(chain = true)
 @Table("simple_event")
 public class SimpleEvent {
 
@@ -33,4 +33,10 @@ public class SimpleEvent {
 
     @Column
     private String message;
+
+    @Column("event_type")
+    private String eventType;
+
+    @Column("event_source")
+    private String eventSource;
 }
